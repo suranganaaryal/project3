@@ -25,3 +25,12 @@ sw $a0, 0($sp)
 lw $t0, 0($sp)
 addi $sp,$sp,4
 move $t6, $t0
+
+start: 
+li $t2,0
+li $t7, -1				 				
+lb $s0, ($t0)
+beq $s0, 9, removing							
+beq $s0, 32, removing
+move $t6, $t0 
+j loop
