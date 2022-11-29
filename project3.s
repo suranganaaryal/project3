@@ -45,3 +45,16 @@ beq $s0, 0, substring
 beq $s0, 10, substring
 addi $t0,$t0,1
 beq $s0, 44, substring
+
+checking:
+addi $t5,$t5,1
+bgt $t2,0,invalid
+beq $s0, 9,  skipping 			
+beq $s0, 32, skipping
+ble $s0, 47, invalid 
+ble $s0, 57, valid 					
+ble $s0, 64, invalid
+ble $s0, 81, valid 						
+ble $s0, 96, invalid 						
+ble $s0, 113, valid
+bgt $s0, 113, invalid
