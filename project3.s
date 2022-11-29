@@ -34,3 +34,7 @@ beq $s0, 9, removing
 beq $s0, 32, removing
 move $t6, $t0 
 j loop
+
+removing:
+addi $t0,$t0,1
+j start
