@@ -58,3 +58,12 @@ ble $s0, 81, valid
 ble $s0, 96, invalid 						
 ble $s0, 113, valid
 bgt $s0, 113, invalid
+
+skipping:
+addi $t2,$t2,-1
+j loop
+
+valid:
+addi $t3, $t3,1
+mul $t2,$t2,$t7
+j loop
