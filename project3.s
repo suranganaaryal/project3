@@ -154,3 +154,15 @@ ble $t8, 1, mixed
 mul $t9, $t9, 30
 addi $t8, $t8, -1
 j exponent
+
+finish : jr $ra
+
+display:
+mul $t1,$t1,4
+add $sp, $sp, $t1
+
+end:
+li $v0, 1				
+
+add $a0,$zero, $t5
+syscall
