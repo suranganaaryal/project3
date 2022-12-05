@@ -191,3 +191,7 @@ li $v0, 4
 la $a0, prompt
 syscall
 j commaprinting
+
+Exit:
+li $v0, 10
+syscall
