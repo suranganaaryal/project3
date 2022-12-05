@@ -125,3 +125,9 @@ li $t9, 1
 ble $s0, 57, number
 ble $s0, 87, uppercase
 ble $s0, 119, lowercase
+
+number:
+sub $s0, $s0, 48
+beq $t3, 0, mixed
+li $t9, 30
+j exponent
