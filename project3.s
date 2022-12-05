@@ -89,3 +89,10 @@ beq $s0,44, invalid
 li $t3,0
 li $t2,0
 j loop
+
+substring:
+bgt $t2,0,inside
+bge $t3,5,inside
+addi $t1,$t1,1
+sub $sp, $sp,4
+sw $t6, 0($sp)
