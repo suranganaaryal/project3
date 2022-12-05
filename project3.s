@@ -137,3 +137,9 @@ sub $s0, $s0, 87
 beq $t3, 0, mixed
 li $t9, 30
 j exponent
+
+uppercase:
+sub $s0, $s0, 55
+beq $t3, 0, mixed
+li $t9, 30
+j exponent
