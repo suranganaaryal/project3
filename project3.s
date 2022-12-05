@@ -108,3 +108,10 @@ beq $s0,44, invalid
 li $t2,0
 j loop
 
+sub_b:
+beq $t3,0,finish
+addi $t3,$t3,-1
+lb $s0, ($t4)
+addi $t4,$t4,1
+j sub_c
+
