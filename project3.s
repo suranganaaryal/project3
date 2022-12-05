@@ -170,3 +170,11 @@ syscall
 li $v0, 11
 add $a0,$zero,'/'
 syscall
+
+sub $t1, $t1,4
+sub $sp,$sp,4
+lw $s7, 0($sp)
+beq $s7,-1,questionprinting
+li $v0, 1
+lw $a0, 0($sp)
+syscall
