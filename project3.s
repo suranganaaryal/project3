@@ -143,3 +143,8 @@ sub $s0, $s0, 55
 beq $t3, 0, mixed
 li $t9, 30
 j exponent
+
+mixed:
+mul $s2, $t9, $s0
+add $s1,$s1,$s2
+j moving
