@@ -185,3 +185,9 @@ li $v0, 4
 la $a0, comma
 syscall
 j end
+
+questionprinting:
+li $v0, 4
+la $a0, prompt
+syscall
+j commaprinting
