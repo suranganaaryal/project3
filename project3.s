@@ -166,3 +166,7 @@ li $v0, 1
 
 add $a0,$zero, $t5
 syscall
+
+li $v0, 11
+add $a0,$zero,'/'
+syscall
